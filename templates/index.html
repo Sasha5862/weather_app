@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+</head>
+<body>
+
+    <form action="" method="post">
+		<input type="text" name="text">
+		<input type="submit">
+    </form>
+
+
+
+    {% if temp1 == None %}
+     <p>Такого города нет</p>
+    {% else: %}
+        <p>Город: {{ city }}</p>
+        <p>Температура: {{ temp1 }}°C</p>
+        <p>Ощущается как: {{ feels_like1 }}°C</p>
+        <p>Ветер: {{ wind }}м/с {{ deg }}°</p>
+
+        <img src="https://openweathermap.org/img/wn/{{ icon }}@2x.png" alt="">
+        <p>{{ desc1.text }}</p>
+    {% endif %}
+
+
+</body>
+</html>
